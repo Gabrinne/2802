@@ -1,0 +1,8 @@
+.erros > p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    background-color: firebrick;
+    color: rgb(32, 26, 14);
+
+}
