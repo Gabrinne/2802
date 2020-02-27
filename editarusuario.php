@@ -1,3 +1,6 @@
+<?php 
+    require_once "validador_acesso.php"
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,18 +23,20 @@
         <div class="collapse navbar-collapse" id="textoNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(Página atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Adicionar produto</a>
+                    <a class="nav-link" href="adicionarprod.php">Adicionar produto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Usuários</a>
+                    <a class="nav-link" href="criarusuario.php">Usuários</a>
                 </li>
             </ul>
-            <span class="navbar-text">
-                <a href=""> Logout </a>
-            </span>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="logoff.php">SAIR</a>
+                </li>
+            </ul>
         </div>
     </nav>
 

@@ -1,0 +1,8 @@
+vestido#12,00#amarelo
+blusa#20,00#preto
+sapato#50,00#azul
+saia#44,00#jeans
+cinto#10,00#preto
+camisa#12,00#sdsdsd
+vestido#12,00#sdsdsd
+bermuda#35,00#jeans

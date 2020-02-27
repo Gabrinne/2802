@@ -1,5 +1,9 @@
 <?php
-//varival que verifica se a autenticacao foi realizada
+
+session_start();
+
+
+//variavel que verifica se a autenticacao foi realizada
 $usuario_autenticado = false;
 
 //usuarios do sistema 
@@ -12,7 +16,6 @@ $usuarios = array(
 print_r($usuarios);
 echo'</pre>'; */
 
-
 //percorrer o array para verificar se o login inputado existe.
 foreach($usuarios as $user) {
  if($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']) {
@@ -20,12 +23,12 @@ foreach($usuarios as $user) {
  }
 }
 if($usuario_autenticado) {
-    header('Location: adicionarprod.php');
+    header('Location: index.php');
+   $_SESSION['autenticado'] = 'SIM';
 } else {
+    $_SESSION['autenticado'] = 'NAO';
     header('Location: login.php?login=erro');
 }
-
-
 
 /*
 print_r($_POST);

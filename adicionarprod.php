@@ -1,3 +1,7 @@
+<?php 
+    require_once "validador_acesso.php"
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,46 +24,50 @@
         <div class="collapse navbar-collapse" id="textoNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(Página atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Adicionar produto</a>
+                    <a class="nav-link" href="adicionarprod.php">Adicionar produto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Usuários</a>
+                    <a class="nav-link" href="criarusuario.php">Usuários</a>
                 </li>
             </ul>
-            <span class="navbar-text">
-                <a href=""> Logout </a>
-            </span>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="logoff.php">SAIR</a>
+                </li>
+            </ul>
         </div>
     </nav>
-    <div class="container mt-5">
-        <form>
-
+    <div class="container mt-5">           
             <h1>Adicionar produto</h1>
             <div class="row">
                 <div class="col">
-                    <label for="input1">Nome</label>
-                    <input type="text" id="input1" class="form-control">
+                    <form action="registro_produtos.php" method="post" enctype="multipart/form-data">
+                        <label for="input1">Nome</label>
+                        <input type="text" name="nome" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input2">Preço</label>
+                        <input type="text" name="preco" class="form-control">
+                    </div>
                 </div>
-                <div class="col">
-                    <label for="input2">Preço</label>
-                    <input type="text" id="input2" class="form-control">
+                <div class="form-group mt-3">
+                    <label for="input1">Descrição</label>
+                    <textarea class="form-control" name="descricao" rows="10"></textarea>
                 </div>
-            </div>
-            <div class="form-group mt-3">
-                <label for="input1">Descrição</label>
-                <textarea class="form-control" id="input1" rows="10"></textarea>
-            </div>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                <label class="custom-file-label" for="validatedCustomFile">Escolher arquivo...</label>
-                <div class="invalid-feedback">Exemplo de feedback inválido para input file</div>
-              </div>
-              <button class="btn btn-primary col-lg mt-3" type="submit">Adicionar</button>
-        </form>
-    </div>
+
+                <!--
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="escolherarquivo">
+                    <label class="custom-file-label" for="validatedCustomFile">Escolher arquivo...</label>
+                    <div class="invalid-feedback">Exemplo de feedback inválido para input file</div>
+                </div> -->
+                
+                <button class="btn btn-primary col-lg mt-3" type="submit">Adicionar</button>
+            </form>
+        </div>
 
 
 
